@@ -1,0 +1,14 @@
+# Archivos compilados de Java
+*.class
+
+# Carpetas de construcción de NetBeans
+build/
+dist/
+nbproject/private/
+
+# Archivos de serialización (datos locales como tus .ser)
+*.ser
+
+# Archivos temporales del sistema
+Thumbs.db
+.DS_Store
