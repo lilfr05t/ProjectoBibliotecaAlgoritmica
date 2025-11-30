@@ -4,8 +4,29 @@ import com.biblioteca.gestor.Biblioteca;
 import com.biblioteca.vista.FrmMenuPrincipal;
 import javax.swing.JOptionPane;
 import com.biblioteca.excepciones.PersistenciaException; // Importa tu excepción
-
+/**
+ * Clase principal que contiene el punto de entrada (main) de la aplicación.
+ * <p>
+ * Su responsabilidad es orquestar el inicio del sistema, asegurando que los datos
+ * previos se carguen correctamente antes de mostrar la interfaz gráfica al usuario.
+ * </p>
+ * @author JeremyL, EnzoL
+ * @version 1.0
+ */
 public class ProyectoBibliotecaAlgoritmicaII {
+    /**
+     * Método principal que inicia la ejecución del programa.
+     * <p>
+     * El flujo de inicialización es el siguiente:
+     * <ol>
+     * <li>Intenta cargar los datos persistidos (libros y estudiantes) invocando a {@link Biblioteca#cargarTodo()}.</li>
+     * <li>Si la carga falla (ej. archivos no existen o corruptos), captura la {@link PersistenciaException},
+     * notifica al usuario mediante un diálogo, e inicia el sistema con datos vacíos.</li>
+     * <li>Finalmente, lanza la ventana principal {@link FrmMenuPrincipal} dentro del hilo de eventos de Swing (EDT).</li>
+     * </ol>
+     * </p>
+     * @param args Argumentos de la línea de comandos (no utilizados en esta versión).
+     */
     public static void main(String[] args) {
         
         // 1. CARGA DE DATOS PERSISTENTES (INIT)

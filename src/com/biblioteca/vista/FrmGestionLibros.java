@@ -7,13 +7,26 @@ import com.biblioteca.modelo.LibroInvestigacion;
 import com.biblioteca.excepciones.PersistenciaException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+/**
+ * Interfaz gráfica para la administración del inventario de libros.
+ * Permite realizar operaciones CRUD (Crear, Leer, Eliminar) sobre los libros.
+ * <p>
+ * Esta vista maneja la lógica de presentación para crear diferentes tipos de libros
+ * ({@link LibroTexto} o {@link LibroInvestigacion}) basándose en la selección del usuario,
+ * demostrando el uso de polimorfismo desde la capa de presentación.
+ * </p>
+ * @author JeremyL, EnzoL
+ * @version 1.0
+ */
 public class FrmGestionLibros extends javax.swing.JFrame {
     // Acceso al Singleton
     private final Biblioteca biblioteca = Biblioteca.getInstance();
     private DefaultTableModel modeloTablaLibros;
 
 
-   
+    /**
+     * Inicializa la ventana, configura la tabla y carga los datos existentes.
+     */
     public FrmGestionLibros() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -282,6 +295,10 @@ public class FrmGestionLibros extends javax.swing.JFrame {
         tblLibros.setModel(modeloTablaLibros);
         cargarDatosTabla();
     }
+    /**
+     * Recorre la lista de libros del sistema y los muestra en la tabla.
+     * Utiliza `instanceof` para determinar el tipo de libro y mostrarlo correctamente.
+     */
     private void cargarDatosTabla() {
         modeloTablaLibros.setRowCount(0); // Limpiar filas
         

@@ -8,12 +8,23 @@ import com.biblioteca.modelo.Estudiante;
 import com.biblioteca.modelo.Libro;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
+/**
+ * Interfaz para gestionar el flujo de préstamos y devoluciones.
+ * Actúa como intermediario entre el usuario y la lógica transaccional de la clase {@link Biblioteca}.
+ * <p>
+ * Maneja las excepciones de negocio (como {@link LimitePrestamosExcedidoException} o
+ * {@link RecursoNoEncontradoException}) y muestra mensajes de error amigables al usuario.
+ * </p>
+ * @author JeremyL, EnzoL
+ * @version 1.0
+ */
 public class FrmPrestamosDevolucion extends javax.swing.JFrame {
     
     private final Biblioteca biblioteca = Biblioteca.getInstance();
 
-    
+    /**
+     * Inicializa los componentes de la interfaz de préstamos.
+     */
     public FrmPrestamosDevolucion() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -25,7 +36,10 @@ public class FrmPrestamosDevolucion extends javax.swing.JFrame {
         );
         tblPrestamosActivos.setModel(modelo);
     }
-    // Método para cargar los libros que tiene prestados un estudiante
+    /**
+     * Busca y muestra en la tabla los libros que un estudiante específico tiene prestados actualmente.
+     * @param codigoEstudiante El código del estudiante a consultar.
+     */
     private void cargarPrestamosActivos(String codigoEstudiante) {
         DefaultTableModel modelo = (DefaultTableModel) tblPrestamosActivos.getModel();
         modelo.setRowCount(0); // Limpiar filas

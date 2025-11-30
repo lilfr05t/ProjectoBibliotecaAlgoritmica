@@ -64,10 +64,8 @@
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="txtNombre" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txtCodigo" max="32767" attributes="0"/>
-                              <Component id="txtCarrera" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="txtCodigo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtCarrera" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="273" max="32767" attributes="0"/>
                       <Component id="btnEliminar" min="-2" max="-2" attributes="0"/>

@@ -3,11 +3,23 @@ package com.biblioteca.vista;
 import com.biblioteca.gestor.Biblioteca;
 import javax.swing.JOptionPane;
 import com.biblioteca.excepciones.PersistenciaException;
-
+/**
+ * Ventana principal de la aplicación que sirve como menú de navegación.
+ * Permite al usuario acceder a los diferentes módulos del sistema:
+ * gestión de libros, gestión de estudiantes y operaciones de préstamo/devolución.
+ * <p>
+ * También gestiona el cierre seguro de la aplicación, asegurando que los datos
+ * se guarden antes de salir.
+ * </p>
+ * @author JeremyL
+ * @version 1.0
+ */
 public class FrmMenuPrincipal extends javax.swing.JFrame {
     
     private final Biblioteca biblioteca = Biblioteca.getInstance();
-    
+    /**
+     * Constructor que inicializa los componentes gráficos y centra la ventana.
+     */
     public FrmMenuPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);

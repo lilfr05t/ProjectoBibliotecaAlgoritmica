@@ -5,12 +5,25 @@ import com.biblioteca.modelo.Estudiante;
 import com.biblioteca.excepciones.PersistenciaException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+/**
+ * Interfaz gráfica para el registro y mantenimiento de estudiantes.
+ * Permite agregar nuevos estudiantes al sistema y eliminarlos, validando
+ * previamente que no tengan préstamos pendientes.
+ * <p>
+ * Muestra en tiempo real el estado de los préstamos de cada estudiante
+ * (cantidad de libros prestados vs límite permitido).
+ * </p>
+ * @author JeremyL, EnzoL
+ * @version 1.0
+ */
 public class FrmGestionEstudiantes extends javax.swing.JFrame {
     
     private final Biblioteca biblioteca = Biblioteca.getInstance();
     private DefaultTableModel modeloTablaEstudiantes;
     
-  
+    /**
+     * Crea la ventana de gestión de estudiantes e inicializa la tabla de datos.
+     */
     public FrmGestionEstudiantes() {
         initComponents();
         this.setLocationRelativeTo(null);
