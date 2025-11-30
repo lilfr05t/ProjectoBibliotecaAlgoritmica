@@ -24,7 +24,6 @@ public class ProyectoBibliotecaAlgoritmicaII {
      * notifica al usuario mediante un diálogo, e inicia el sistema con datos vacíos.</li>
      * <li>Finalmente, lanza la ventana principal {@link FrmMenuPrincipal} dentro del hilo de eventos de Swing (EDT).</li>
      * </ol>
-     * </p>
      * @param args Argumentos de la línea de comandos (no utilizados en esta versión).
      */
     public static void main(String[] args) {
