@@ -46,8 +46,7 @@ public abstract class Libro implements Prestable {
     /**
      * Método abstracto que obliga a las subclases a definir cómo muestran su información.
      * Esto es un ejemplo de polimorfismo en el sistema.
-     * * @return Una cadena con los detalles formateados del libro.
-     * @return 
+     * @return Una cadena con los detalles formateados del libro.
      */
     public abstract String mostrarDetalles(); 
 }

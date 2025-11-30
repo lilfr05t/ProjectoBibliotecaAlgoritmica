@@ -44,9 +44,9 @@ public class Gestor<T extends Serializable> implements Serializable {
         return new ArrayList<>(listaObjetos);
     }
     /**
-     * Deserializa los objetos desde el archivo y los carga en memoria.
-     * Si el archivo no existe, inicializa una lista vacía.
-     * * @throws PersistenciaException Si el archivo está corrupto o la clase no coincide.
+     * Busca un objeto en la lista que cumpla con una condición específica definida por un predicado.
+     * @param predicado La condición de búsqueda (ej. e -> e.getCodigo().equals("123")).
+     * @return El objeto encontrado que cumple la condición, o null si no se encuentra.
      */
     public T buscarPorIdentificador(Predicate<T> predicado) {
         for (T objeto : listaObjetos) {
@@ -75,7 +75,7 @@ public class Gestor<T extends Serializable> implements Serializable {
     /**
      * Deserializa los objetos desde el archivo y los carga en memoria.
      * Si el archivo no existe, inicializa una lista vacía.
-     * * @throws PersistenciaException Si el archivo está corrupto o la clase no coincide.
+     * @throws PersistenciaException Si el archivo está corrupto o la clase no coincide.
      */
         public void cargar() throws PersistenciaException {
         try (ObjectInputStream ois = new ObjectInputStream(

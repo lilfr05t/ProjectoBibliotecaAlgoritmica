@@ -51,7 +51,7 @@ public class Biblioteca { // Clase Singleton y Fachada
     /**
      * Realiza la transacción de préstamo de un libro a un estudiante.
      * Valida la existencia de ambos, la disponibilidad del libro y el límite de préstamos del estudiante.
-     * * @param codigoEstudiante Identificador del estudiante.
+     * @param codigoEstudiante Identificador del estudiante.
      * @param ISBN Identificador del libro.
      * @throws RecursoNoEncontradoException Si el estudiante o el libro no existen, o el libro no está disponible.
      * @throws LimitePrestamosExcedidoException Si el estudiante ya tiene el máximo de libros permitidos.
@@ -81,7 +81,7 @@ public class Biblioteca { // Clase Singleton y Fachada
     /**
      * Realiza la transacción de devolución de un libro.
      * Actualiza el estado del libro a disponible y lo remueve de la lista del estudiante.
-     * * @param codigoEstudiante Identificador del estudiante.
+     * @param codigoEstudiante Identificador del estudiante.
      * @param ISBN Identificador del libro a devolver.
      * @throws RecursoNoEncontradoException Si el estudiante no existe o no tiene ese libro prestado.
      * @throws PersistenciaException Si ocurre un error al guardar los cambios.
