@@ -5,19 +5,30 @@ import java.util.ArrayList;
 import java.util.List;
 import com.biblioteca.excepciones.PersistenciaException;
 import java.util.function.Predicate;
-
+/**
+ * Clase genérica encargada de administrar una colección de objetos y su persistencia.
+ * Permite realizar operaciones CRUD (Crear, Leer, Eliminar) y guardar/cargar datos en archivos .ser.
+ * * @param <T> El tipo de objeto que este gestor administrará (debe implementar {@link Serializable}).
+ */
 public class Gestor<T extends Serializable> implements Serializable {
 
     private static final long serialVersionUID = 1L; 
     private List<T> listaObjetos;
     private final String nombreArchivo;
-
+    /**
+     * Inicializa el gestor y define el nombre del archivo para la persistencia.
+     * @param nombreArchivo Nombre del archivo (ej. "libros.ser") donde se guardarán los datos.
+     */
     public Gestor(String nombreArchivo) {
         this.listaObjetos = new ArrayList<>();
         this.nombreArchivo = nombreArchivo;
     }
     
-    // Métodos CRUD básicos
+    /**
+     * Agrega un nuevo objeto a la colección y actualiza el archivo de persistencia.
+     * @param objeto El objeto a agregar.
+     * @throws PersistenciaException Si ocurre un error al escribir en el disco.
+     */
     public void agregar(T objeto) throws PersistenciaException {
         this.listaObjetos.add(objeto);
         guardar(); 
@@ -32,7 +43,11 @@ public class Gestor<T extends Serializable> implements Serializable {
     public List<T> listarTodo() {
         return new ArrayList<>(listaObjetos);
     }
-
+    /**
+     * Deserializa los objetos desde el archivo y los carga en memoria.
+     * Si el archivo no existe, inicializa una lista vacía.
+     * * @throws PersistenciaException Si el archivo está corrupto o la clase no coincide.
+     */
     public T buscarPorIdentificador(Predicate<T> predicado) {
         for (T objeto : listaObjetos) {
             if (predicado.test(objeto)) {
@@ -43,6 +58,10 @@ public class Gestor<T extends Serializable> implements Serializable {
     }
 
     // MÉTODO DE PERSISTENCIA 1: GUARDAR (SERIALIZACIÓN)
+    /**
+     * Serializa la lista completa de objetos en el archivo especificado.
+     * @throws PersistenciaException Si falla el flujo de salida de datos.
+     */
     public void guardar() throws PersistenciaException {
         try (ObjectOutputStream oos = new ObjectOutputStream(
                 new FileOutputStream(nombreArchivo))) {
@@ -53,6 +72,11 @@ public class Gestor<T extends Serializable> implements Serializable {
     }
 
     // MÉTODO DE PERSISTENCIA 2: CARGAR (DESERIALIZACIÓN)
+    /**
+     * Deserializa los objetos desde el archivo y los carga en memoria.
+     * Si el archivo no existe, inicializa una lista vacía.
+     * * @throws PersistenciaException Si el archivo está corrupto o la clase no coincide.
+     */
         public void cargar() throws PersistenciaException {
         try (ObjectInputStream ois = new ObjectInputStream(
                 new FileInputStream(nombreArchivo))) {
