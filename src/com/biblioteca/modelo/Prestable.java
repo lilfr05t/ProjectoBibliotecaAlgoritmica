@@ -11,7 +11,7 @@ import java.io.Serializable;
  * Extiende {@link Serializable} para permitir que los objetos que la implementen
  * puedan ser persistidos en archivos binarios.
  * </p>
- * * @author JeremyL
+ * @author JeremyL
  * @version 1.0
  */
 public interface Prestable extends Serializable {

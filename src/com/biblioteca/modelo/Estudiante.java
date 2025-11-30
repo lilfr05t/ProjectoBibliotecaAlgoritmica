@@ -49,6 +49,7 @@ public class Estudiante implements Serializable {
     /**
      * Devuelve el número máximo de libros que un estudiante puede tener prestados.
      * Este método resuelve el error en FrmGestionEstudiantes.
+     * @return Max cantidad de libros
      */
     public int getMaxLibros() {
         return MAX_LIBROS_PERMITIDOS;

@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 /**
  * Clase genérica encargada de administrar una colección de objetos y su persistencia.
  * Permite realizar operaciones CRUD (Crear, Leer, Eliminar) y guardar/cargar datos en archivos .ser.
- * * @param <T> El tipo de objeto que este gestor administrará (debe implementar {@link Serializable}).
+ * @param <T> El tipo de objeto que este gestor administrará (debe implementar {@link Serializable}).
  */
 public class Gestor<T extends Serializable> implements Serializable {
 
