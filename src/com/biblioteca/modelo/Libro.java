@@ -5,14 +5,25 @@
 package com.biblioteca.modelo;
 
 import java.io.Serializable;
-
+/**
+ * Clase abstracta que representa un libro genérico en la biblioteca.
+ * Implementa la interfaz {@link Prestable} y sirve como base para tipos específicos
+ * de libros (Texto, Investigación).
+ * * @see LibroTexto
+ * @see LibroInvestigacion
+ */
 public abstract class Libro implements Prestable {
 
     private String ISBN; // Encapsulado
     private String titulo;
     private String autor;
     private boolean disponible = true;
-    
+    /**
+     * Constructor principal para inicializar un libro.
+     * @param ISBN Identificador único del libro.
+     * @param titulo Título de la obra.
+     * @param autor Autor principal de la obra.
+     */
     public Libro(String ISBN, String titulo, String autor) {
         this.ISBN = ISBN;
         this.titulo = titulo;
@@ -32,6 +43,11 @@ public abstract class Libro implements Prestable {
     public String getAutor() { return autor; }
     public void setAutor(String autor) { this.autor = autor; }
     
-    // Método Abstracto para Polimorfismo
+    /**
+     * Método abstracto que obliga a las subclases a definir cómo muestran su información.
+     * Esto es un ejemplo de polimorfismo en el sistema.
+     * * @return Una cadena con los detalles formateados del libro.
+     * @return 
+     */
     public abstract String mostrarDetalles(); 
 }
