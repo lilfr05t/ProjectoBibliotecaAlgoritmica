@@ -33,7 +33,7 @@ public class ProyectoBibliotecaAlgoritmicaII {
             // Llama al Singleton y carga todos los gestores (libros, estudiantes, préstamos)
             Biblioteca.getInstance().cargarTodo();
             System.out.println("Datos de persistencia cargados exitosamente.");
-
+            
         } catch (PersistenciaException e) {
             // Manejo de error si los archivos .ser no existen o están corruptos
             JOptionPane.showMessageDialog(null, 
@@ -43,7 +43,12 @@ public class ProyectoBibliotecaAlgoritmicaII {
         }
         
         // 2. EJECUCIÓN DE LA INTERFAZ GRÁFICA (EDT)
-        // Esto asegura que la GUI se lance correctamente en el hilo de eventos de Swing.
+        try {
+        // Opción clara (reemplazar por la linea de abajo): new com.formdev.flatlaf.FlatIntelliJLaf().setup(); 
+            javax.swing.UIManager.setLookAndFeel(new com.formdev.flatlaf.FlatDarkLaf());
+        } catch(Exception ex) {
+            System.err.println("No se pudo cargar el tema oscuro. Se usará el por defecto.");
+        }   
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -51,6 +56,8 @@ public class ProyectoBibliotecaAlgoritmicaII {
                 new FrmMenuPrincipal().setVisible(true);
             }
         });
+        
+    
     }
     
 }
