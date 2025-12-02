@@ -399,7 +399,12 @@ public class FrmPrestamosDevolucion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
-        // TODO add your handling code here:
+        // 1. Crear y mostrar el menú principal
+        FrmMenuPrincipal menu = new FrmMenuPrincipal();
+        menu.setVisible(true);
+
+        // 2. Ocultar el formulario actual
+        this.dispose(); // Cierra esta ventana y libera recursos
     }//GEN-LAST:event_btnSalir1ActionPerformed
 
    
