@@ -70,7 +70,6 @@ public class FrmGestionLibros extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestion de Libros");
 
-        txtTitulo.setText("           ");
         txtTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTituloActionPerformed(evt);
@@ -84,7 +83,6 @@ public class FrmGestionLibros extends javax.swing.JFrame {
             }
         });
 
-        txtAutor.setText("            ");
         txtAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAutorActionPerformed(evt);
@@ -107,7 +105,6 @@ public class FrmGestionLibros extends javax.swing.JFrame {
             }
         });
 
-        txtEdicion.setText("           ");
         txtEdicion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEdicionActionPerformed(evt);
@@ -126,14 +123,14 @@ public class FrmGestionLibros extends javax.swing.JFrame {
             }
         });
 
-        txtTema.setText("          ");
+        txtTema.setToolTipText("");
         txtTema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTemaActionPerformed(evt);
             }
         });
 
-        txtDOI.setText("        ");
+        txtDOI.setToolTipText("");
         txtDOI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDOIActionPerformed(evt);
@@ -422,10 +419,10 @@ public class FrmGestionLibros extends javax.swing.JFrame {
             
             // Creación polimórfica del objeto basada en la selección
             if (tipo.equals("Texto")) {
-                int edicion = Integer.parseInt(txtEdicion.getText());
-                nuevoLibro = new LibroTexto(isbn, titulo, autor, txtFacultad.getText(), edicion);
+                int edicion = Integer.parseInt(txtEdicion.getText().trim());
+                nuevoLibro = new LibroTexto(isbn, titulo, autor, txtFacultad.getText().trim(), edicion);
             } else if (tipo.equals("Investigación")) {
-                nuevoLibro = new LibroInvestigacion(isbn, titulo, autor, txtTema.getText(), txtDOI.getText());
+                nuevoLibro = new LibroInvestigacion(isbn, titulo, autor, txtTema.getText().trim(), txtDOI.getText());
             }
 
             if (nuevoLibro != null) {
