@@ -118,12 +118,6 @@ public class FrmGestionEstudiantes extends javax.swing.JFrame {
             }
         });
 
-        txtCarrera.setText("                 ");
-
-        txtNombre.setText("                 ");
-
-        txtCodigo.setText("                     ");
-
         tblEstudiantes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

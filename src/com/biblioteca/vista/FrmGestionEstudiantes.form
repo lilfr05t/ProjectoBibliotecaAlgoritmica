@@ -160,19 +160,10 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCarrera">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="                 "/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNombre">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="                 "/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCodigo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="                     "/>
-      </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>

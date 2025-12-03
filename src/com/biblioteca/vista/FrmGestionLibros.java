@@ -76,7 +76,6 @@ public class FrmGestionLibros extends javax.swing.JFrame {
             }
         });
 
-        txtISBN.setText("         ");
         txtISBN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtISBNActionPerformed(evt);
@@ -116,7 +115,6 @@ public class FrmGestionLibros extends javax.swing.JFrame {
             }
         });
 
-        txtFacultad.setText("           ");
         txtFacultad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFacultadActionPerformed(evt);
