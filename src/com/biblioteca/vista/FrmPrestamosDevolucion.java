@@ -124,12 +124,8 @@ public class FrmPrestamosDevolucion extends javax.swing.JFrame {
         txtCod.setText("Código alumno:");
         txtCod.setPreferredSize(new java.awt.Dimension(130, 160));
 
-        txtCodigoEstudiante.setText("Inserte...");
-
         txtI.setText("ISBN del Libro:");
         txtI.setPreferredSize(new java.awt.Dimension(130, 160));
-
-        txtISBNPrestamo.setText("Inserte...");
 
         btnPrestar.setText("Prestar");
         btnPrestar.addActionListener(new java.awt.event.ActionListener() {
@@ -175,12 +171,8 @@ public class FrmPrestamosDevolucion extends javax.swing.JFrame {
         txtCod1.setText("Código alumno:");
         txtCod1.setPreferredSize(new java.awt.Dimension(130, 160));
 
-        txtCodigoDevolucion.setText("Inserte...");
-
         txtI1.setText("ISBN del Libro:");
         txtI1.setPreferredSize(new java.awt.Dimension(130, 160));
-
-        txtISBNDevolucion.setText("Inserte...");
 
         btnDevolver1.setText("Devolver");
         btnDevolver1.addActionListener(new java.awt.event.ActionListener() {

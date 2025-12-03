@@ -165,9 +165,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtCodigoEstudiante">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Inserte..."/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="txtI">
               <Properties>
@@ -178,9 +175,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtISBNPrestamo">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Inserte..."/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnPrestar">
               <Properties>
@@ -259,9 +253,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtCodigoDevolucion">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Inserte..."/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="txtI1">
               <Properties>
@@ -272,9 +263,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtISBNDevolucion">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Inserte..."/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnDevolver1">
               <Properties>
